@@ -61,6 +61,6 @@ class AppConfig
   end
 
   def self.load_config_yaml filename
-    YAML.load(File.read(filename))
+    YAML.load(ERB.new(File.read(filename)).result)
   end
 end

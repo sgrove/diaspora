@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'mysql2', '0.2.6'
+# gem 'mysql2', '0.2.6'
 gem 'rails', '3.0.3'
 gem 'foreigner', '0.9.1'
 
@@ -49,12 +49,16 @@ gem 'fastercsv', '1.5.4', :require => false
 gem 'jammit', '0.5.4'
 gem 'rest-client', '1.6.1'
 gem 'typhoeus'
+
 #Backups
 gem 'cloudfiles', '1.4.10', :require => false
 
 #Queue
 gem 'resque', '1.10.0'
 gem 'SystemTimer', '1.2.1' unless RUBY_VERSION.include? '1.9' || RUBY_PLATFORM =~ 'win32'
+
+# Misc
+gem 'jasmine', :path => 'vendor/gems/jasmine', :require => false
 
 group :development do
   gem 'capistrano', '2.5.19', :require => false
@@ -79,7 +83,6 @@ group :test do
   gem 'rcov'
   gem 'database_cleaner', '0.6.0'
   gem 'webmock', :require => false
-  gem 'jasmine', :path => 'vendor/gems/jasmine', :require => false
   gem 'mongrel', :require => false if RUBY_VERSION.include? '1.8'
   gem 'rspec-instafail', :require => false
   gem 'fuubar'
